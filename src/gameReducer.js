@@ -24,9 +24,6 @@ export const initialState = {
 export function gameReducer(state, action) {
     switch (action.type) {
 
-        case 'LOAD_QUESTIONS':
-            return { ...state, questions: action.payload }
-
         case 'START_GAME':
             return {
                 ...state,

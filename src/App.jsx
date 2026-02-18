@@ -5,17 +5,13 @@ import SetupScreen from './components/SetupScreen'
 import GameScreen from './components/GameScreen'
 import QuestionModal from './components/QuestionModal'
 import VictoryModal from './components/VictoryModal'
+import questionsData from './questions.json'
 
 export default function App() {
-    const [state, dispatch] = useReducer(gameReducer, initialState)
-
-    // Load questions on mount
-    useEffect(() => {
-        fetch('./questions.json')
-            .then(r => r.json())
-            .then(data => dispatch({ type: 'LOAD_QUESTIONS', payload: data.questions }))
-            .catch(() => alert('Không thể tải câu hỏi. Vui lòng kiểm tra file questions.json'))
-    }, [])
+    const [state, dispatch] = useReducer(gameReducer, {
+        ...initialState,
+        questions: questionsData
+    })
 
     // ===== HANDLERS =====
     function handleStartGame(teamXName, teamOName) {
