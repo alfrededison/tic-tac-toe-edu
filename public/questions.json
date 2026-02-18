@@ -1,0 +1,81 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Dòng sông nào dài nhất thế giới?",
+      "options": ["Sông Mê Kông", "Sông Nile", "Sông Amazon", "Sông Hồng"],
+      "answer": 1,
+      "time": 20
+    },
+    {
+      "id": 2,
+      "type": "open_ended",
+      "question": "Nêu định nghĩa của trọng lực?",
+      "answer": "Trọng lực là lực hút của Trái Đất tác dụng lên vật...",
+      "time": 30
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Thủ đô của Việt Nam là gì?",
+      "options": ["Hà Nội", "Hồ Chí Minh", "Đà Nẵng", "Huế"],
+      "answer": 0,
+      "time": 15
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Ai là người phát minh ra bóng đèn điện?",
+      "options": ["Albert Einstein", "Thomas Edison", "Nikola Tesla", "Isaac Newton"],
+      "answer": 1,
+      "time": 20
+    },
+    {
+      "id": 5,
+      "type": "open_ended",
+      "question": "Giải thích hiện tượng quang hợp ở cây xanh?",
+      "answer": "Quang hợp là quá trình cây xanh sử dụng ánh sáng mặt trời để chuyển hóa CO2 và nước thành glucose và oxy...",
+      "time": 35
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Hành tinh nào lớn nhất trong hệ Mặt Trời?",
+      "options": ["Trái Đất", "Sao Hỏa", "Sao Mộc", "Sao Thổ"],
+      "answer": 2,
+      "time": 15
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Công thức hóa học của nước là gì?",
+      "options": ["H2O", "CO2", "O2", "NaCl"],
+      "answer": 0,
+      "time": 15
+    },
+    {
+      "id": 8,
+      "type": "open_ended",
+      "question": "Nêu 3 đặc điểm của khí hậu nhiệt đới?",
+      "answer": "Nhiệt độ cao quanh năm, lượng mưa lớn, có 2 mùa rõ rệt...",
+      "time": 30
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Năm nào Việt Nam thống nhất?",
+      "options": ["1945", "1954", "1975", "1976"],
+      "answer": 2,
+      "time": 20
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Đơn vị đo nhiệt độ phổ biến nhất là gì?",
+      "options": ["Celsius", "Fahrenheit", "Kelvin", "Cả ba đều đúng"],
+      "answer": 3,
+      "time": 20
+    }
+  ]
+}

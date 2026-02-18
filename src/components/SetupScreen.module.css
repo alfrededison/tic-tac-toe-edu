@@ -1,0 +1,170 @@
+.screen {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn var(--transition-normal);
+}
+
+.container {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp 0.6s ease;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--team-x-primary), var(--team-o-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.titleIcon {
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+    -webkit-text-fill-color: initial;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.teamInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vsDivider {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.inputGroup label {
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.teamX label {
+    color: var(--team-x-primary);
+}
+
+.teamO label {
+    color: var(--team-o-primary);
+}
+
+.teamSymbol {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.inputGroup input {
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+    background: var(--bg-darker);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    transition: all var(--transition-normal);
+}
+
+.teamX input:focus {
+    outline: none;
+    border-color: var(--team-x-primary);
+    box-shadow: 0 0 0 3px var(--team-x-glow);
+}
+
+.teamO input:focus {
+    outline: none;
+    border-color: var(--team-o-primary);
+    box-shadow: 0 0 0 3px var(--team-o-glow);
+}
+
+.startButton {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, var(--team-x-primary), var(--team-o-primary));
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.startButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.startButton:hover::before {
+    left: 100%;
+}
+
+.startButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 100, 100, 0.3);
+}
+
+.startButton:active {
+    transform: translateY(0);
+}
+
+.buttonIcon {
+    font-size: 1.75rem;
+}

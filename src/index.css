@@ -1,0 +1,211 @@
+/* ===== CSS RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Team X Colors (Red/Orange) */
+    --team-x-primary: hsl(10, 85%, 55%);
+    --team-x-secondary: hsl(25, 95%, 60%);
+    --team-x-glow: hsla(10, 85%, 55%, 0.5);
+
+    /* Team O Colors (Blue) */
+    --team-o-primary: hsl(210, 85%, 55%);
+    --team-o-secondary: hsl(195, 95%, 60%);
+    --team-o-glow: hsla(210, 85%, 55%, 0.5);
+
+    /* Neutral Colors */
+    --bg-dark: hsl(220, 20%, 10%);
+    --bg-darker: hsl(220, 20%, 8%);
+    --bg-card: hsla(220, 20%, 15%, 0.8);
+    --text-primary: hsl(0, 0%, 95%);
+    --text-secondary: hsl(0, 0%, 70%);
+    --border-color: hsla(0, 0%, 100%, 0.1);
+
+    /* Accent Colors */
+    --success: hsl(142, 76%, 45%);
+    --error: hsl(0, 84%, 60%);
+    --warning: hsl(45, 100%, 51%);
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(220, 20%, 12%), hsl(220, 20%, 8%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-glow-x: 0 0 20px var(--team-x-glow);
+    --shadow-glow-o: 0 0 20px var(--team-o-glow);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--gradient-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes cellAppear {
+    from {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes winningCell {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: var(--shadow-md);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: var(--shadow-lg), 0 0 30px currentColor;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes timerPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes correctAnswer {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes incorrectAnswer {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes victoryBounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fireworkAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-200px) scale(0);
+        opacity: 0;
+    }
+}

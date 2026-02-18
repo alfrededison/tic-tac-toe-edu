@@ -1,0 +1,70 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 1.5rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cell {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 3px solid var(--border-color);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.cell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.cell:hover::before {
+    opacity: 1;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cell.x {
+    color: var(--team-x-primary);
+    border-color: var(--team-x-primary);
+    animation: cellAppear 0.4s ease;
+}
+
+.cell.o {
+    color: var(--team-o-primary);
+    border-color: var(--team-o-primary);
+    animation: cellAppear 0.4s ease;
+}
+
+.cell.disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.cell.disabled:hover {
+    transform: none;
+    border-color: inherit;
+}
+
+.cell.winning {
+    animation: winningCell 0.6s ease infinite;
+}
